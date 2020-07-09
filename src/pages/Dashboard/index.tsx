@@ -48,6 +48,8 @@ const Dashboard: React.FC = () => {
       const response = await api.get(`repos/${newRepo}`);
       const repository = response.data;
 
+      console.log(repository.owner.avatar_url);
+
       setRepositories([...repositories, repository]);
       setNewRepo('');
       setInputError('');
